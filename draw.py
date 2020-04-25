@@ -1,6 +1,7 @@
 from display import *
 from matrix import *
 from gmath import *
+import random
 
 def draw_scanline(x0, z0, x1, z1, y, screen, zbuffer, color):
     if x0 > x1:
@@ -21,6 +22,7 @@ def draw_scanline(x0, z0, x1, z1, y, screen, zbuffer, color):
         z+= delta_z
 
 def scanline_convert(polygons, i, screen, zbuffer, color):
+    #color = [random.randint(0, 255),random.randint(0, 255),random.randint(0, 255)]
     flip = False
     BOT = 0
     TOP = 2
